@@ -1,0 +1,13 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-page">
+  <block wx:for="{{currCont}}" wx:key="{{index}}">
+    <image wx:if="{{item.src !== ''}}" class="detail-page__banner" src="{{item.src}}"></image>
+    <view class="module__title">
+      <text>{{item.title}}</text>
+      <text class="module__title--subtitle">{{item.subtitle}}</text> 
+    </view>
+    <view class="detail-page__part">
+      {{item.content}}
+    </view>
+  </block>
+</view>

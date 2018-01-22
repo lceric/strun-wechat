@@ -1,0 +1,41 @@
+/**app.wxss**/
+/* 引入weui  */
+@import "weui/weui.wxss";
+/* 引入zanui  */
+@import "zanui/index.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.slide-image{
+  width: 750rpx;
+  height: 300rpx;
+}
+.module__title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding-top: 18rpx;
+  justify-content: center;
+  color: #333;
+}
+.module__title--subtitle{
+  font-size: 70%;
+}
+.weui-grid__label {
+  color: #797979;
+}
+/* 详情文章  */
+.detail-page {
+  padding: 16rpx;
+}
+.detail-page__part {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-top: 16rpx;
+}
