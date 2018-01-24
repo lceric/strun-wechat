@@ -1,0 +1,31 @@
+<!--pages/fullpage/fullpage.wxml-->
+<swiper class='scroll-view' vertical current-item-id="{{ciId}}" bindchange="pageChange"
+  autoplay="{{false}}" current='{{pageindex}}' bindanimationfinish="pageAnimationFinish" duration="{{300}}">
+  <swiper-item class="scroll-view__item" item-id="red" catchtouchmove="fullPageTouch">
+    <view class="scroll-view__item-panel page-one" hidden="{{isHidden.red}}">
+      <view bindtap='intoLucky' class='lucky-btn into-btn animated bounceInUp delay300'>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item class="scroll-view__item" item-id="yellow" catchtouchmove="fullPageTouch">
+    <view class="scroll-view__item-panel page-two" hidden="{{isHidden.yellow}}">
+      <view class='lucky-label__container animated bounceInDown'></view>
+      <view class='lucky-form animated bounceInUp delay200'>
+        <input class='lucky-form__input animated bounceInUp delay200' type='text'></input>
+        <radio-group class="lucky-form__radio-group clearfix" bindchange="radioChange">
+          <label class="lucky-form__radio-item animated delay800 bounceIn{{index ? 'Left' : 'Right'}}" wx:for="{{radioGroups}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+          </label>
+        </radio-group>
+      </view>
+      <view bindtap='intoLucky' class='lucky-btn start-btn animated bounceInUp delay300'>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item class="scroll-view__item" item-id="blue" catchtouchmove="fullPageTouch">
+    <view class="scroll-view__item-panel page-three" hidden="{{isHidden.blue}}">3</view>
+  </swiper-item>
+  <swiper-item class="scroll-view__item" item-id="green" catchtouchmove="fullPageTouch">
+    <view class="scroll-view__item-panel page-four" hidden="{{isHidden.green}}">4</view>
+  </swiper-item>
+</swiper>

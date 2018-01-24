@@ -3,6 +3,10 @@
 @import "weui/weui.wxss";
 /* 引入zanui  */
 @import "zanui/index.wxss";
+/* 引入animate  */
+@import "lib/animate/animate.wxss";
+@import "lib/animate/delay.wxss";
+
 .container {
   height: 100%;
   display: flex;

@@ -1,0 +1,93 @@
+/* pages/fullpage/fullpage.wxss */
+.scroll-view{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.scroll-view__item {
+  background-image: url('https://strun.club/lucky-app/static/img/part1.38bc855.png');
+  background-size: 100% 100%;
+}
+.scroll-view__item-panel{
+  flex: 1;
+  height: 100%;
+}
+.page-one{
+  /* background-color: green; */
+}
+.page-two{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: yellow; */
+  background-image: url('https://strun.club/lucky-app/static/img/part_two_bg.abb450b.png');
+  background-size: 100% 100%;
+}
+.page-three{
+  /* background-color: blue; */
+}
+.page-four{
+  /* background-color: blue; */
+}
+.lucky-btn{
+  position: absolute;
+  left: 50%;
+  margin-left: -220rpx;
+  bottom: 100rpx;
+  width: 440rpx;
+  height: 160rpx;
+}
+.into-btn{
+  background-image: url('https://strun.club/lucky-app/static/img/part_one_btn.fb27f3e.png');
+  background-size: 100% 100%;
+}
+.lucky-label__container {
+  width: 260rpx;
+  height: 460rpx;
+  margin-bottom: 220rpx;
+  background-image: url('https://strun.club/lucky-app/static/img/part_two_label.592eb84.png');
+  background-size: 100% 100%;
+}
+.lucky-form {
+  position: absolute;
+  left: 50%;
+  margin-left: -220rpx;
+  bottom: 80rpx;
+  width: 440rpx;
+  height: 360rpx;
+}
+.lucky-form__input {
+  width: 100%;
+  text-align: center;
+  height: 66rpx;
+  background: #fff;
+  color: #6a1000;
+  box-sizing: border-box;
+  border: 1px solid #feaeaf;
+}
+.lucky-form__radio-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24rpx;
+  height: 66rpx;
+}
+.lucky-form__radio-item {
+  width: 48%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 24rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #6a1000;
+  border: 1px solid #feaeaf;
+}
+.lucky-form__radio-item radio {
+  height: 24px;
+   margin-bottom: 10rpx; 
+}
+.start-btn {
+  background-image: url('https://strun.club/lucky-app/static/img/part_two_btn.0f54531.png');
+  background-size: 100% 100%;
+}

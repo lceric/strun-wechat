@@ -37,6 +37,31 @@ Page({
       src: '../../images/icon/system.png',
       query: 'xtkf',
       title: '中后台系统开发'
+    }],
+    pluginData: [{
+      src: '../../images/icon/iphone.png',
+      query: 'fullpage',
+      title: 'FullPage'
+    }, {
+      src: '../../images/icon/weixin.png',
+      query: 'wxkf',
+      title: '微信开发'
+    }, {
+      src: '../../images/icon/we.png',
+      query: 'xcxkf',
+      title: '小程序开发'
+    }, {
+      src: '../../images/icon/iphone.png',
+      query: 'sjzd',
+      title: '手机站点'
+    }, {
+      src: '../../images/icon/active.png',
+      query: 'hdym',
+      title: 'h5活动页面'
+    }, {
+      src: '../../images/icon/system.png',
+      query: 'xtkf',
+      title: '中后台系统开发'
     }]
   },
   //事件处理函数

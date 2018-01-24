@@ -1,0 +1,33 @@
+.delay100 {
+  animation-delay: .1s;
+}
+.delay200 {
+  animation-delay: .2s;
+}
+.delay300 {
+  animation-delay: .3s;
+}
+.delay400 {
+  animation-delay: .4s;
+}
+.delay500 {
+  animation-delay: .5s;
+}
+.delay600 {
+  animation-delay: .6s;
+}
+.delay700 {
+  animation-delay: .7s;
+}
+.delay800 {
+  animation-delay: .8s;
+}
+.delay900 {
+  animation-delay: .9s;
+}
+.delay1000 {
+  animation-delay: 1s;
+}
+.delay2000 {
+  animation-delay: 2s;
+}
