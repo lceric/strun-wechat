@@ -1,31 +1,57 @@
 <!--pages/fullpage/fullpage.wxml-->
 <swiper class='scroll-view' vertical current-item-id="{{ciId}}" bindchange="pageChange"
   autoplay="{{false}}" current='{{pageindex}}' bindanimationfinish="pageAnimationFinish" duration="{{300}}">
-  <swiper-item class="scroll-view__item" item-id="red" catchtouchmove="fullPageTouch">
-    <view class="scroll-view__item-panel page-one" hidden="{{isHidden.red}}">
-      <view bindtap='intoLucky' class='lucky-btn into-btn animated bounceInUp delay300'>
+  <swiper-item class="scroll-view__item" item-id="one" catchtouchmove="fullPageTouch">
+    <view class="scroll-view__item-panel page-one" hidden="{{isHidden.one}}">
+      <view class='lucky-dog lucky-btn animated bounceInUp delay300'>
+        <view bindtap='intoLucky' class='lucky-btn__main into-btn '>
+        </view>
+        <view class='lucky-dog__tail'></view>
       </view>
     </view>
   </swiper-item>
-  <swiper-item class="scroll-view__item" item-id="yellow" catchtouchmove="fullPageTouch">
-    <view class="scroll-view__item-panel page-two" hidden="{{isHidden.yellow}}">
-      <view class='lucky-label__container animated bounceInDown'></view>
+  <swiper-item class="scroll-view__item" item-id="two" catchtouchmove="fullPageTouch">
+    <view class="scroll-view__item-panel page-two" hidden="{{isHidden.two}}">
+      <view class='lucky-label__container animated bounceInDown delay100'></view>
       <view class='lucky-form animated bounceInUp delay200'>
-        <input class='lucky-form__input animated bounceInUp delay200' type='text'></input>
+        <input maxlength="11" class='lucky-form__input animated bounceInUp delay200' type='number'></input>
         <radio-group class="lucky-form__radio-group clearfix" bindchange="radioChange">
-          <label class="lucky-form__radio-item animated delay800 bounceIn{{index ? 'Left' : 'Right'}}" wx:for="{{radioGroups}}">
+          <label class="lucky-form__radio-item animated delay800 bounceIn{{index ? 'Left' : 'Right'}}" wx:for="{{radioGroups}}" wx:key="{{index}}">
             <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
           </label>
         </radio-group>
       </view>
-      <view bindtap='intoLucky' class='lucky-btn start-btn animated bounceInUp delay300'>
+      <view class='lucky-dog lucky-btn animated bounceInUp delay300'>
+        <view bindtap='startLucky' class='lucky-btn__main start-btn '>
+        </view>
+        <view class='lucky-dog__tail'></view>
       </view>
     </view>
   </swiper-item>
-  <swiper-item class="scroll-view__item" item-id="blue" catchtouchmove="fullPageTouch">
-    <view class="scroll-view__item-panel page-three" hidden="{{isHidden.blue}}">3</view>
+  <swiper-item class="scroll-view__item" item-id="three" catchtouchmove="fullPageTouch">
+    <view class="scroll-view__item-panel page-three" hidden="{{isHidden.three}}">
+      <view class='lucky-header animated bounceInDown delay100'></view>
+      <view bindtap='luckyShake' class='lucky-label__container-shake shaking animated'></view>
+      <view class='lucky-label__shaketext animated bounceInUp delay300'></view>
+      <view class='dog animated bounceInUp delay600'></view>
+      <!-- 点击签筒/摇一摇 触发展示  -->
+      <view bindtap='showLabelHandler' class='lucky-label__shake-over animated fadeIn' hidden='{{!isShaking}}'>
+        <view class='lucky-label__shake-hand'></view>
+        <view class='lucky-label__shake-arround animated fadeIn delay300'></view>
+      </view>
+    </view>
   </swiper-item>
-  <swiper-item class="scroll-view__item" item-id="green" catchtouchmove="fullPageTouch">
-    <view class="scroll-view__item-panel page-four" hidden="{{isHidden.green}}">4</view>
+  <swiper-item class="scroll-view__item" item-id="four" catchtouchmove="fullPageTouch">
+    <view class="scroll-view__item-panel page-four" hidden="{{isHidden.four}}">
+      <view class='lucky-paper animated fadeIn delay100'>
+        <view class='lucky-paper__h'></view>
+        <view class='lucky-paper__cont'>
+          <view wx:for="{{paperText}}" wx:key="{{index}}" class='lucky-paper__cont-p'>
+            <text wx:for="{{item}}" wx:for-index="wordIndex" wx:for-item="word" class='lucky-paper__word  animated fadeInUp delay{{(index + wordIndex) * 100}}'>{{word}}</text>
+          </view>
+        </view>
+      </view>
+      <navigator url='/pages/index/index' class=' zan-btn zan-btn--primary animated bounceInUp delay300'>返回首页</navigator>
+    </view>
   </swiper-item>
 </swiper>

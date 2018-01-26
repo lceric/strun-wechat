@@ -1,36 +1,61 @@
 /* pages/fullpage/fullpage.wxss */
-.scroll-view{
+
+.scroll-view {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
+
 .scroll-view__item {
-  background-image: url('https://strun.club/lucky-app/static/img/part1.38bc855.png');
+  background-image: url('https://strun.club/lucky-app/static/img/bg.jpg');
   background-size: 100% 100%;
 }
-.scroll-view__item-panel{
+
+.scroll-view__item-panel {
   flex: 1;
   height: 100%;
 }
-.page-one{
+
+.page-one {
   /* background-color: green; */
+  background-image: url('https://strun.club/lucky-app/static/img/part1.png');
+  background-size: 100% 100%;
 }
-.page-two{
+
+.page-two {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* background-color: yellow; */
-  background-image: url('https://strun.club/lucky-app/static/img/part_two_bg.abb450b.png');
+  background-image: url('https://strun.club/lucky-app/static/img/part_two_bg.png');
   background-size: 100% 100%;
 }
-.page-three{
+
+.page-three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   /* background-color: blue; */
 }
-.page-four{
+
+.page-four {
   /* background-color: blue; */
 }
-.lucky-btn{
+
+.lucky-header {
+  position: absolute;
+  left: 50%;
+  margin-left: -220rpx;
+  top: 100rpx;
+  width: 440rpx;
+  height: 160rpx;
+  background-image: url('https://strun.club/lucky-app/static/img/part_header_bg.png');
+  background-size: 100% 100%;
+}
+
+.lucky-btn {
   position: absolute;
   left: 50%;
   margin-left: -220rpx;
@@ -38,17 +63,39 @@
   width: 440rpx;
   height: 160rpx;
 }
-.into-btn{
-  background-image: url('https://strun.club/lucky-app/static/img/part_one_btn.fb27f3e.png');
+
+.lucky-dog__tail {
+  position: absolute;
+  right: 33%;
+  top: 48rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background-image: url('https://strun.club/lucky-app/static/img/dog_tail.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: -1;
+  transform-origin: bottom left;
+  animation: tailPlay 0.2s linear infinite;
+}
+
+.lucky-btn__main {
+  height: 100%;
+  width: 100%;
+}
+
+.into-btn {
+  background-image: url('https://strun.club/lucky-app/static/img/part_one_btn.png');
   background-size: 100% 100%;
 }
+
 .lucky-label__container {
   width: 260rpx;
   height: 460rpx;
   margin-bottom: 220rpx;
-  background-image: url('https://strun.club/lucky-app/static/img/part_two_label.592eb84.png');
+  background-image: url('https://strun.club/lucky-app/static/img/part_two_label.png');
   background-size: 100% 100%;
 }
+
 .lucky-form {
   position: absolute;
   left: 50%;
@@ -57,6 +104,7 @@
   width: 440rpx;
   height: 360rpx;
 }
+
 .lucky-form__input {
   width: 100%;
   text-align: center;
@@ -66,12 +114,14 @@
   box-sizing: border-box;
   border: 1px solid #feaeaf;
 }
+
 .lucky-form__radio-group {
   display: flex;
   justify-content: space-between;
   margin-top: 24rpx;
   height: 66rpx;
 }
+
 .lucky-form__radio-item {
   width: 48%;
   height: 100%;
@@ -83,11 +133,158 @@
   color: #6a1000;
   border: 1px solid #feaeaf;
 }
+
 .lucky-form__radio-item radio {
   height: 24px;
-   margin-bottom: 10rpx; 
+  margin-bottom: 10rpx;
 }
+
 .start-btn {
-  background-image: url('https://strun.club/lucky-app/static/img/part_two_btn.0f54531.png');
+  background-image: url('https://strun.club/lucky-app/static/img/part_two_btn.png');
   background-size: 100% 100%;
+}
+
+.lucky-label__container-shake {
+  width: 360rpx;
+  height: 560rpx;
+  margin-bottom: 80rpx;
+  background-image: url('https://strun.club/lucky-app/static/img/part_three_label.png');
+  background-size: 100% 100%;
+}
+
+.shaking {
+  animation: partShake 1.2s ease-in-out infinite;
+}
+
+.lucky-label__shaketext {
+  position: absolute;
+  width: 450rpx;
+  height: 80rpx;
+  bottom: 220rpx;
+  background-image: url('https://strun.club/lucky-app/static/img/part_three_shaketext.png');
+  background-size: 100% 100%;
+}
+
+.page-three .dog {
+  position: absolute;
+  width: 180rpx;
+  height: 120rpx;
+  bottom: 0;
+  background-image: url('https://strun.club/lucky-app/static/img/part_three_dog.png');
+  background-size: 100% 100%;
+}
+
+.lucky-label__shake-over {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url('https://strun.club/lucky-app/static/img/part_three_cover.png');
+  background-size: 100% 100%;
+}
+
+.lucky-label__shake-hand {
+  position: absolute;
+  width: 120rpx;
+  height: 140rpx;
+  left: 50%;
+  margin-left: -20rpx;
+  top: 56%;
+  -webkit-animation: handPlay 0.6s ease-in-out infinite;
+  animation: handPlay 0.6s ease-in-out infinite;
+  background-image: url('https://strun.club/lucky-app/static/img/part_three_hand.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.lucky-label__shake-arround {
+  background-image: url('https://strun.club/lucky-app/static/img/part_three_arround.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex: 1;
+  animation: arroundRotate 2.8s ease-in-out;
+}
+.lucky-paper {
+  position: absolute;
+  bottom: 26%;
+  top: 6%;
+  left: 36rpx;
+  right: 36rpx;
+  background-image: url('https://strun.club/lucky-app/static/img/part_four_paper.3232879.png');
+  background-size: 100% 100%;
+}
+.lucky-paper__h {
+    position: absolute;
+    right: 60rpx;
+    top: 10%;
+    width: 138rpx;
+    height: 400rpx;
+    background-image: url('https://strun.club/lucky-app/static/img/part_four_h.png');
+    background-size: 100% 100%;
+}
+.lucky-paper__cont {
+  position: absolute;
+  right: 180rpx;
+  left: 60rpx;
+  top: 20%;
+  height: 520rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.lucky-paper__cont-p {
+  width: 64rpx;
+  margin-right: 26rpx;
+  height: 100%;
+  color: #6a1000;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  border-left: 1px solid #6a1000;
+}
+.lucky-paper__word{
+  display: block;
+}
+@keyframes tailPlay {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes partShake {
+  0%, 100% {
+    transform: rotateZ(0deg);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotateZ(-10deg);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: rotateZ(10deg);
+  }
+}
+
+@keyframes handPlay {
+  from {
+    transform: scale(0.8) translateX(0px);
+  }
+
+  to {
+    transform: scale(1) translateX(5px);
+  }
+}
+
+@keyframes arroundRotate {
+  from {
+    transform: rotateZ(0);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
 }
